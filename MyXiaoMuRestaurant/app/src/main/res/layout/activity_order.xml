@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.OrderActivity"
+    android:orientation="vertical"
+    >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/black"
+        >
+        <ImageView
+            android:id="@+id/myOrderImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_launcher_round"
+
+            />
+        <TextView
+            android:id="@+id/myOrderUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myOrderImageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="顾客，您好！"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            />
+
+        <Button
+            android:id="@+id/myOderButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:text="点餐"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:textColor="@color/black"
+            android:background="@drawable/orange"
+            android:padding="4dp"
+            />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:text="我的订单"
+        android:textColor="@color/white"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+
+        />
+
+    <com.example.qiaoxian.myxiaomurestaurant.ui.view.refresh.SwipeRefreshLayout
+        android:id="@+id/myOrderSwipe"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/myOrderRecycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </com.example.qiaoxian.myxiaomurestaurant.ui.view.refresh.SwipeRefreshLayout>
+
+</LinearLayout>

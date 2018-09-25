@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    android:background="@drawable/item_bg"
+    >
+
+    <ImageView
+        android:id="@+id/PLAImage"
+        android:layout_width="140dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/item_image"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/PLAImage"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        >
+        <TextView
+            android:id="@+id/PLARestaurantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="小慕餐厅"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/PLALabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:maxLines="2"
+            android:text="小慕餐厅全是好吃的！"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/PLAPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/PLAImage"
+        android:layout_toRightOf="@id/PLAImage"
+        android:layout_marginLeft="10dp"
+        android:text="30元"
+        android:textColor="@color/orange"
+        />
+
+    <ImageView
+        android:id="@+id/PLASub"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@id/PLAImage"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/sub"
+        />
+
+    <TextView
+        android:id="@+id/PLAAddSubNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/PLASub"
+        android:layout_alignBottom="@id/PLAImage"
+        android:text="1"
+        android:textColor="@color/black"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+
+        />
+    
+    <ImageView
+        android:id="@+id/PLAAdd"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@id/PLAImage"
+        android:layout_toLeftOf="@id/PLAAddSubNumber"
+        android:src="@drawable/add"
+        />
+
+
+</RelativeLayout>
